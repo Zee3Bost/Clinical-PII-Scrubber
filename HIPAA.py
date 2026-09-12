@@ -1,3 +1,4 @@
+
 clinical_note = input("Enter the clinical note to scrub: ")
 
 real_names = ["Symere", "Woods", "Victoria", "Walker"]
@@ -9,7 +10,9 @@ scrubbed_words = []
 for word in words:
     clean_word = word.strip(".,!?")
     if clean_word in real_names:
+
         scrubbed_words.append("####")
+
     elif len(clean_word) == 11 and clean_word[3] == "-" and clean_word[6] == "-":
         scrubbed_words.append("[REDACTED_SSN]")
     elif len(clean_word) == 8 and clean_word[3] == "-":
